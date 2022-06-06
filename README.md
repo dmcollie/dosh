@@ -1,5 +1,11 @@
-<img src="https://github.com/polyfy/polylith/blob/master/images/logo.png" width="30%" alt="Polylith" id="logo">
+# dosh
+Dosh is a personal finance application.
 
+## Installation
+Download from https://github.com/lazd/dosh
+
+
+# Polylith
 The Polylith documentation can be found here:
 
 - The [high-level documentation](https://polylith.gitbook.io/polylith)
@@ -8,17 +14,7 @@ The Polylith documentation can be found here:
 
 You can also get in touch with the Polylith Team on [Slack](https://clojurians.slack.com/archives/C013B7MQHJQ).
 
-# dosh
-
-Dosh is a personal finance application.
-
-## Installation
-
-Download from https://github.com/lazd/dosh
-
 ## Usage
-
-FIXME: explanation
 
 Get info about the workspace:
 
@@ -77,21 +73,3 @@ You can then depend on the library in other projects (adjust the `:mvn/version` 
     nil
     user=> (greet/greeting {:person "REPL"})
     "Hello, REPL!"
-
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-

@@ -1,12 +1,10 @@
 {:aliases {:dev  {:extra-paths ["development/src"
-                                "bases/cli/src"
-                                "bases/cli/resources"
-                                "components/schema/src"
-                                "components/schema/resources"]
-                  :extra-deps  {org.clojure/clojure {:mvn/version "1.11.1"}}}
+                                "components/domain.model/src"
+                                "components/domain.model/resources"]
+                  :extra-deps  {org.clojure/clojure {:mvn/version "1.11.1"}
+                                metosin/malli {:mvn/version "0.8.4"}}}
 
-           :test {:extra-paths ["bases/cli/test"
-                                "components/schema/test"
+           :test {:extra-paths ["components/domain.model/test"
                                 "projects/dosh/test"]
                   :extra-deps  {org.clojure/test.check {:mvn/version "1.1.1"}}}
 

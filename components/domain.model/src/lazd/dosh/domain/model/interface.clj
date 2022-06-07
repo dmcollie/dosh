@@ -1,12 +1,12 @@
 (ns lazd.dosh.domain.model.interface
-  (:require [lazd.dosh.domain.model.journal-schema :as js]))
+  (:require [lazd.dosh.domain.model.journal-file-schema :as jfs]))
 
 (defn validate-account
   "Checks if the account is valid"
   [account]
-  (js/validate-account account))
+  (jfs/validate-account account))
 
 (defn validate-status
   "Checks if the status is valid"
   [status]
-  (js/validate-status status))
+  (jfs/validate-status status))

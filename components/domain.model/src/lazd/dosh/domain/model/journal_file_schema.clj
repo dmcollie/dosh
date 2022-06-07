@@ -1,4 +1,4 @@
-(ns lazd.dosh.domain.model.journal-schema
+(ns lazd.dosh.domain.model.journal-file-schema
   "Define the schema for the journal file."
   (:require [malli.core :as m]))
 

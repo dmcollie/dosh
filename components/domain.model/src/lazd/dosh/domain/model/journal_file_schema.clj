@@ -2,9 +2,10 @@
   "Define the schema for the journal file."
   (:require [malli.core :as m]))
 
-;Definition is here https://www.ledger-cli.org/3.0/doc/ledger3.html#Journal-File-Format-for-Developers
+; Definition is here https://www.ledger-cli.org/3.0/doc/ledger3.html#Journal-File-Format-for-Developers
 
-(def Account (m/schema [:re "^[0-9a-zA-Z]+(:[0-9a-zA-Z]+)*$"]))
+; Must start with: assets, liabilities, revenue, expenses, or equity.
+(def Account (m/schema [:re "^(assets|liabilities|revenue|expenses|equity)+(:[0-9a-zA-Z]+)*$"]))
 (def Status (m/schema [:enum "" "!" "*"]))
 (def Code (m/schema [:or [:re "\\(.*?\\)"] empty?]))
 

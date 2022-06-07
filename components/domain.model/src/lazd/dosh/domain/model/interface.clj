@@ -10,3 +10,8 @@
   "Checks if the status is valid"
   [status]
   (jfs/validate-status status))
+
+(defn validate-code
+  "Checks if the code is valid"
+  [code]
+  (jfs/validate-code code))

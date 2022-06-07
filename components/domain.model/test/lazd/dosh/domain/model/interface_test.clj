@@ -1,11 +1,11 @@
 (ns lazd.dosh.domain.model.interface-test
-  (:require [clojure.test :as test :refer :all]
+  (:require [clojure.test :refer [deftest is]]
             [lazd.dosh.domain.model.interface :as model]))
 
 (deftest valid-account-test
   (is (model/validate-account "asset:cash")))
 
-(deftest valid-account-test
+(deftest invalid-account-test
   (is (not (model/validate-account "asset cash"))))
 
 (deftest unmarked-status-test
@@ -19,3 +19,12 @@
 
 (deftest invalid-status-test
   (is (not (model/validate-status "x"))))
+
+(deftest valid-code-test
+  (is (model/validate-code "(78)")))
+
+(deftest invalid-code-test
+  (is (not (model/validate-code "78"))))
+
+(deftest no-code-test
+  (is (model/validate-code "")))

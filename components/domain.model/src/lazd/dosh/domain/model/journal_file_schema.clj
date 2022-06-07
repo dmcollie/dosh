@@ -6,11 +6,8 @@
 
 (def Account (m/schema [:re "^[0-9a-zA-Z]+(:[0-9a-zA-Z]+)*$"]))
 (def Status (m/schema [:enum "" "!" "*"]))
+(def Code (m/schema [:or [:re "\\(.*?\\)"] empty?]))
 
-;(def Transaction
-;  [:map
-;   [:tx/date ??]
-;   [:tx/amount ??]])
 
 (defn validate-account
   "Validate the account against its schema"
@@ -21,3 +18,8 @@
   "Validate the status against its schema"
   [status]
   (m/validate Status status))
+
+(defn validate-code
+  "Validate the code against its schema"
+  [code]
+  (m/validate Code code))

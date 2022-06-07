@@ -1,6 +1,18 @@
 # dosh
 Dosh is a personal finance application.
 
+It uses [plain text accounting](https://plaintextaccounting.org).
+
+## Research areas
+
+### Extracting transaction data from PDF
+https://github.com/tabulapdf/tabula-java
+https://github.com/gavinkflam/tabula-api
+
+### Ledger file format
+https://hledger.org/1.26/hledger.html#journal-format
+https://www.ledger-cli.org/3.0/doc/ledger3.html#Journal-File-Format-for-Developers
+
 ## Installation
 Download from https://github.com/lazd/dosh
 

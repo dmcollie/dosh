@@ -37,3 +37,12 @@
 
 (deftest invalid-date-test
          (is (not (model/validate-date "1971-06-34"))))
+
+(deftest valid-description-test
+  (is (model/validate-description "Sports car!")))
+
+(deftest valid-empty-description-test
+  (is (model/validate-description "")))
+
+(deftest invalid-description-test
+  (is (not (model/validate-description 100))))

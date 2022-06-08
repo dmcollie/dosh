@@ -20,3 +20,8 @@
   "Checks if the date is valid"
   [date]
   (jfs/validate-date date))
+
+(defn validate-description
+  "Checks if the description is valid"
+  [description]
+  (jfs/validate-description description))

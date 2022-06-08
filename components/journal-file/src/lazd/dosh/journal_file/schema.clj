@@ -11,6 +11,7 @@
 (def SimpleDate
   "Dates in the journal file use simple dates format: YYYY-MM-DD or YYYY/MM/DD or YYYY.MM.DD, with leading zeros optional."
   [:re "^(\\d{4}|\\d{2})[^\\w\\d\\r\\n:](0?[1-9]|1[0-2])[^\\w\\d\\r\\n:](0?[1-9]|[12]\\d|30|31)$"])
+(def Description (m/schema [:or string? empty?]))
 
 (defn validate-account
   "Validate the account against its schema"
@@ -31,3 +32,8 @@
   "Validate the date against its schema"
   [date]
   (m/validate SimpleDate date))
+
+(defn validate-description
+  "Validate the description against its schema"
+  [description]
+  (m/validate Description description))

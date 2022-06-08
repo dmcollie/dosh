@@ -31,3 +31,9 @@
 
 (deftest no-code-test
   (is (model/validate-code "")))
+
+(deftest valid-date-test
+  (is (model/validate-date "1971-06-23")))
+
+(deftest invalid-date-test
+  (is (not (model/validate-date "1971-06-34"))))

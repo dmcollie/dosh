@@ -8,7 +8,10 @@
 (def Account (m/schema [:re "^(assets|liabilities|revenue|expenses|equity)+(:[0-9a-zA-Z]+)*$"]))
 (def Status (m/schema [:enum "" "!" "*"]))
 (def Code (m/schema [:or [:re "\\(.*?\\)"] empty?]))
-
+;See https://stackoverflow.com/a/40309602 for regex logic
+(def SimpleDate
+  "Dates in the journal file use simple dates format: YYYY-MM-DD or YYYY/MM/DD or YYYY.MM.DD, with leading zeros optional."
+  [:re "^(\\d{4}|\\d{2})[^\\w\\d\\r\\n:](0?[1-9]|1[0-2])[^\\w\\d\\r\\n:](0?[1-9]|[12]\\d|30|31)$"])
 
 (defn validate-account
   "Validate the account against its schema"
@@ -24,3 +27,8 @@
   "Validate the code against its schema"
   [code]
   (m/validate Code code))
+
+(defn validate-date
+  "Validate the date against its schema"
+  [date]
+  (m/validate SimpleDate date))

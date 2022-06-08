@@ -15,3 +15,8 @@
   "Checks if the code is valid"
   [code]
   (jfs/validate-code code))
+
+(defn validate-date
+  "Checks if the date is valid"
+  [date]
+  (jfs/validate-date date))

@@ -1,5 +1,4 @@
-(ns lazd.dosh.domain.model.journal-file-schema
-  "Define the schema for the journal file."
+(ns lazd.dosh.journal-file.schema  "Define the schema for the journal file."
   (:require [malli.core :as m]))
 
 ; Definition is here https://www.ledger-cli.org/3.0/doc/ledger3.html#Journal-File-Format-for-Developers

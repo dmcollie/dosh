@@ -1,5 +1,5 @@
-(ns lazd.dosh.domain.model.interface
-  (:require [lazd.dosh.domain.model.journal-file-schema :as jfs]))
+(ns lazd.dosh.journal-file.interface
+  (:require [lazd.dosh.journal-file.schema :as jfs]))
 
 (defn validate-account
   "Checks if the account is valid"
